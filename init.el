@@ -1,10 +1,3 @@
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -14,6 +7,7 @@
 (add-to-list 'load-path "~/.emacs.d/config/")
 
 (require 'init-packages)
+(require 'init-ui)
 
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -24,9 +18,7 @@
 
 (global-auto-revert-mode t)
 
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(setq inhibit-splash-screen t)
+
  
 (global-linum-mode t)
 
@@ -37,8 +29,6 @@
 					    ;; Microsoft
 					    ("24ms" "Microsoft")
 					    ))
-
-(setq initial-frame-alist '((width . 120) (height . 40)))
 
 (defun open-my-init-file()
   (interactive)
@@ -62,10 +52,8 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
-(global-hl-line-mode t)
 
 
-(setq-default cursor-type 'bar)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
