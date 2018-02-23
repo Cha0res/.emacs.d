@@ -21,8 +21,8 @@
 			   exec-path-from-shell
 			   popwin
                            ;; --- Themes ---
-			   ;;solarized-theme
-			   material-theme
+			   solarized-theme
+			   ;;material-theme
                            ) "Default packages")
 
 (setq package-selected-packages 'cha0res/packages)
@@ -64,8 +64,7 @@
 
 (global-company-mode t)
 
-;;(load-theme 'solarized-dark t)
-(load-theme 'material t)
+(load-theme 'solarized-dark t)
 
 (require 'popwin)
 (popwin-mode t)
